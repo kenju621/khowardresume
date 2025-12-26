@@ -53,7 +53,7 @@ const links: LinkItem[] = [
   },
   {
     label: 'Website',
-    href: 'https://kmd-entertainment-portfolio.vercel.app/',
+    href: 'https://www.kennyjunior.com/',
   },
 ];
 
