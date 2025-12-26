@@ -1,26 +1,31 @@
+/* Bring in Tailwind v4 */
 @import "tailwindcss";
 
+/* Optional: you can customize theme in CSS later with @theme, but not needed yet */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Smooth fonts for all screens, including TV */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background-color: #050814;
+  color: #ffffff;
+}
+
+/* Nice scrolling on mobile + desktop */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Slightly bump base font size on very large screens (TVs, big monitors) */
+@media (min-width: 1536px) {
+  body {
+    font-size: 18px;
+  }
 }
